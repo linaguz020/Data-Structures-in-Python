@@ -2,3 +2,6 @@ src/__pycache__/LinkedList.cpython-313.pyc
 src/tests.py
 src/__pycache__/Node.cpython-313.pyc
 src/LinkedList/__pycache__/LinkedList.cpython-313.pyc
+src/LinkedList/__pycache__/LinkedList.cpython-311.pyc
+.gitignore
+.gitignore
