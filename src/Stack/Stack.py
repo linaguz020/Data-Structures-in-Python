@@ -26,9 +26,12 @@ class Stack:
             print("No items to pop.")
             return
         
-        new_list = []
-        for i in range(0, self.size() - 1):
-            new_list.append(self.items[i])
         last = self.items[-1]
-        self.items = new_list
+        self.items = self.items[0:-2]
         return last
+    
+    def top(self):
+        if self.empty():
+            return
+        
+        return self.items[-1]

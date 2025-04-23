@@ -31,7 +31,15 @@ class TestStack(unittest.TestCase):
 
     def test_pop(self):
         stack = self.create_sample_stack()
-        self.assertEqual(stack.pop(), 20)
+        self.assertEqual(stack.pop(), 20, "does not correctly pop last element")
+        stack = Stack.Stack()
+        self.assertEqual(stack.pop(), None, "does not correctly handle popping on empty list")
+
+    def test_top(self):
+        stack = self.create_sample_stack()
+        self.assertEqual(stack.top(), 20)
+        stack = Stack.Stack()
+        self.assertEqual(stack.top(), None)
 
 
 if __name__ == '__main__':
