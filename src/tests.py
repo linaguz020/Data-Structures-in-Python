@@ -47,5 +47,21 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(new_list.search(-1), False)
 
 
+    def test_insert_valid_index_filled_list(self):
+        new_list = self.create_sample_list()
+        new_list.insert(17,3)
+        self.assertEqual(new_list.printList(), [12,14,13,17,20], "does not insert into correct position")
+
+    def test_insert_begin_index_filled_list(self):
+        new_list = self.create_sample_list()
+        new_list.insert(17,-1)
+        self.assertEqual(new_list.printList(), [17,12,14,13,20], "does not insert to beginning of list by default")
+
+    def test_insert_begin_index_filled_list(self):
+        new_list = self.create_sample_list()
+        new_list.insert(17,10)
+        self.assertEqual(new_list.printList(), [12,14,13,20,17], "does not insert to end of list by default")
+
+
 if __name__ == '__main__':
     unittest.main()

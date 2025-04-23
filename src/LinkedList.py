@@ -58,3 +58,33 @@ class LinkedList:
         vals.append(curr.val)
         print(vals)
         return vals
+    
+    def insert(self, val, index):
+        # if list empty
+        if self.head is None:
+            self.add(val)
+            return
+        
+        # if index less than or equal to 0, insert at beginning
+        if index <= 0:
+            new_node = Node.Node(val)
+            new_node.next = self.head
+            self.head = new_node
+            return
+        
+        # if index within list
+        i = 1
+        curr = self.head
+        while curr:
+            if i == index:
+                new_node = Node.Node(val)
+                temp = curr.next
+                curr.next = new_node
+                new_node.next = temp
+                return
+            i+=1
+            if curr.next is None:
+                new_node = Node.Node(val)
+                curr.next = new_node
+                return
+            curr = curr.next
