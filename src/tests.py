@@ -46,7 +46,6 @@ class TestLinkedList(unittest.TestCase):
         new_list = self.create_sample_list()
         self.assertEqual(new_list.search(-1), False)
 
-
     def test_insert_valid_index_filled_list(self):
         new_list = self.create_sample_list()
         new_list.insert(17,3)
@@ -66,6 +65,19 @@ class TestLinkedList(unittest.TestCase):
         new_list = LinkedList.LinkedList()
         new_list.insert(17,10)
         self.assertEqual(new_list.printList(), [17], "does not insert single element into empty list")
+
+    def test_delete_valid_index(self):
+        new_list = self.create_sample_list()
+        new_list.delete(1)
+        self.assertEqual(new_list.printList(), [12,13,20], "does not delete element at index")
+        new_list.delete(0)
+        self.assertEqual(new_list.printList(),[13,20], "does not correctly delete element at beginning of list")
+        new_list.delete(1)
+        self.assertEqual(new_list.printList(),[13], "does not correctly delete element at end of list")
+        new_list.delete(0)
+        self.assertEqual(new_list.printList(),[], "does not correctly delete only element in the list")
+        new_list.delete(10)
+        self.assertEqual(new_list.printList(), [], "does not handle deletions on empty list correctly")
 
 
 if __name__ == '__main__':

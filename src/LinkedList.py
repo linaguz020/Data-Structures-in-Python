@@ -101,9 +101,22 @@ class LinkedList:
         if index == 0:
             self.head = self.head.next
             return
-        
+
         i = 1
         curr = self.head
-        while curr:
+        while curr.next:
             if i == index:
                 temp = curr.next
+                if temp.next:
+                    curr.next = temp.next
+                    return
+                else:
+                    curr.next = None
+                    return
+            i += 1
+            curr = curr.next
+
+        print("Invalid index.")
+        return
+
+
