@@ -11,7 +11,17 @@ I have implemented a `LinkedList` class with the following functionalities:
 - **Delete**: Remove an element from the list.
 - **Search**: Returns true if an element is in the list.
 - **Size**: Get the number of elements in the list.
+- **PrintList**: Prints the elements in the Linked List as a list.
 - **Combine**: Join two linked lists into one.
+
+### Stack
+I have implemented a `Stack` class with the following functionalities:
+- **Push**: Adds an element to the top of the stack
+- **Pop**: Removes element at the top of the stack and returns top element
+- **Top**: Returns the element at the top of the stack
+- **Empty**: Returns true if the element is empty
+- **Size**: Returns the number of elements in the stack.
+- **PrintStack**: Prints the elements in the stack as a list.
 
 ## Testing
 All functionalities are thoroughly tested using Python's `unittest` framework to ensure reliability and correctness.

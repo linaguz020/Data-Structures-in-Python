@@ -31,7 +31,8 @@ class TestStack(unittest.TestCase):
 
     def test_pop(self):
         stack = self.create_sample_stack()
-        self.assertEqual(stack.pop(), 20, "does not correctly pop last element")
+        self.assertEqual(stack.pop(), 20, "does not correctly return last element")
+        self.assertEqual(stack.printStack(), [12, 14, 16], "does not remove item at the top of the stack")
         stack = Stack.Stack()
         self.assertEqual(stack.pop(), None, "does not correctly handle popping on empty list")
 
