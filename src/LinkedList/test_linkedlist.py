@@ -1,6 +1,11 @@
 import unittest
 import LinkedList
 
+class Node:
+    def __init__(self, val):
+        self.next = None
+        self.val = val
+        
 # This class tests Linked List functions
 class TestLinkedList(unittest.TestCase):
     def create_sample_list(self):

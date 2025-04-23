@@ -1,10 +1,15 @@
-import Node
+class Node:
+    def __init__(self, val):
+        self.next = None
+        self.val = val
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def add(self, data):
-        new_node = Node.Node(data)
+        new_node = Node(data)
         # check if inserting into empty list
         if self.head is None:
             self.head = new_node
@@ -30,8 +35,7 @@ class LinkedList:
 
         if data == curr.val:
             return True
-        return False
-        
+        return False    
 
     def size(self):
         if self.head is None:
@@ -67,7 +71,7 @@ class LinkedList:
         
         # if index less than or equal to 0, insert at beginning
         if index <= 0:
-            new_node = Node.Node(val)
+            new_node = Node(val)
             new_node.next = self.head
             self.head = new_node
             return
@@ -77,14 +81,14 @@ class LinkedList:
         curr = self.head
         while curr:
             if i == index:
-                new_node = Node.Node(val)
+                new_node = Node(val)
                 temp = curr.next
                 curr.next = new_node
                 new_node.next = temp
                 return
             i+=1
             if curr.next is None:
-                new_node = Node.Node(val)
+                new_node = Node(val)
                 curr.next = new_node
                 return
             curr = curr.next

@@ -1,4 +1,4 @@
-import LinkedList
+import LinkedList.LinkedList as LinkedList
 
 empty_list = LinkedList.LinkedList()
 new_list = LinkedList.LinkedList()
