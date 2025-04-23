@@ -6,3 +6,7 @@ src/LinkedList/__pycache__/LinkedList.cpython-311.pyc
 .gitignore
 .gitignore
 src/Stack/__pycache__/Stack.cpython-313.pyc
+src/Queue/__pycache__/Queue.cpython-311.pyc
+.gitignore
+.gitignore
+src/Queue/__pycache__/Queue.cpython-313.pyc
