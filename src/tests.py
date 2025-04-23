@@ -62,6 +62,11 @@ class TestLinkedList(unittest.TestCase):
         new_list.insert(17,10)
         self.assertEqual(new_list.printList(), [12,14,13,20,17], "does not insert to end of list by default")
 
+    def test_insert_empty_list(self):
+        new_list = LinkedList.LinkedList()
+        new_list.insert(17,10)
+        self.assertEqual(new_list.printList(), [17], "does not insert single element into empty list")
+
 
 if __name__ == '__main__':
     unittest.main()

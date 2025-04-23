@@ -88,3 +88,22 @@ class LinkedList:
                 curr.next = new_node
                 return
             curr = curr.next
+
+    def delete(self, index):
+        if self.head is None:
+            print("No nodes to remove.")
+            return
+        
+        if index < 0:
+            print("Invalid index.")
+            return
+        
+        if index == 0:
+            self.head = self.head.next
+            return
+        
+        i = 1
+        curr = self.head
+        while curr:
+            if i == index:
+                temp = curr.next
