@@ -122,5 +122,14 @@ class LinkedList:
 
         print("Invalid index.")
         return
-
-
+    
+    def combine(self, list2):
+        if self.head is None:
+            self.head = list2.head
+            return
+        
+        curr = self.head
+        while curr.next:
+            curr = curr.next
+        
+        curr.next = list2.head

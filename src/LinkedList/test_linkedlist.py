@@ -5,7 +5,7 @@ class Node:
     def __init__(self, val):
         self.next = None
         self.val = val
-        
+
 # This class tests Linked List functions
 class TestLinkedList(unittest.TestCase):
     def create_sample_list(self):
@@ -83,6 +83,22 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(new_list.printList(),[], "does not correctly delete only element in the list")
         new_list.delete(10)
         self.assertEqual(new_list.printList(), [], "does not handle deletions on empty list correctly")
+
+    def test_combine_two_lists(self):
+        new_list = self.create_sample_list()
+        second_list = LinkedList.LinkedList()
+        second_list.add(21)
+        second_list.add(22)
+        second_list.add(23)
+        second_list.add(24)
+        empty_list = LinkedList.LinkedList()
+        new_list.combine(second_list)
+        self.assertEqual(new_list.printList(), [12, 14, 13, 20, 21, 22, 23, 24])
+        new_list = self.create_sample_list()
+        new_list.combine(empty_list)
+        self.assertEqual(new_list.printList(), [12, 14, 13, 20], "does not combine empty list to end of new list")
+        empty_list.combine(new_list)
+        self.assertEqual(empty_list.printList(), [12, 14, 13, 20], "does not correctly append list to empty list")
 
 
 if __name__ == '__main__':
