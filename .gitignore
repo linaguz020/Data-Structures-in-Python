@@ -10,3 +10,6 @@ src/Queue/__pycache__/Queue.cpython-311.pyc
 .gitignore
 .gitignore
 src/Queue/__pycache__/Queue.cpython-313.pyc
+src/Hash Tables/__pycache__/HashTable.cpython-313.pyc
+.gitignore
+src/Hash Tables/__pycache__/HashTables.cpython-313.pyc
